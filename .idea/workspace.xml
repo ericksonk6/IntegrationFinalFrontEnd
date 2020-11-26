@@ -10,8 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d764e932-11bc-4ecd-9f47-a944770bf787" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/javascripts/books.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +19,14 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,18 +62,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606369309121</updated>
-      <workItem from="1606369310235" duration="1452000" />
+      <workItem from="1606369310235" duration="1772000" />
     </task>
+    <task id="LOCAL-00001" summary="1st commit">
+      <created>1606376404588</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606376404588</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1st commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="1st commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="90" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606369560078">
       <screen x="0" y="25" width="1440" height="829" />
     </state>
     <state x="90" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.829@0.25.1440.829" timestamp="1606369560078" />
+    <state x="0" y="25" width="1002" height="829" key="CommitChangelistDialog2" timestamp="1606376404412">
+      <screen x="0" y="25" width="1440" height="829" />
+    </state>
+    <state x="0" y="25" width="1002" height="829" key="CommitChangelistDialog2/0.25.1440.829@0.25.1440.829" timestamp="1606376404412" />
     <state width="662" height="212" key="GridCell.Tab.0.bottom" timestamp="1606369560112">
       <screen x="0" y="25" width="1440" height="829" />
     </state>
@@ -83,5 +106,9 @@
       <screen x="0" y="25" width="1440" height="829" />
     </state>
     <state width="662" height="212" key="GridCell.Tab.0.right/0.25.1440.829@0.25.1440.829" timestamp="1606369560112" />
+    <state x="1" y="175" key="Vcs.Push.Dialog.v2" timestamp="1606376477332">
+      <screen x="0" y="25" width="1440" height="829" />
+    </state>
+    <state x="1" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.829@0.25.1440.829" timestamp="1606376477332" />
   </component>
 </project>
