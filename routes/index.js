@@ -39,7 +39,6 @@ router.get('/', function(request, response, next) {
       '                <a class="nav-item nav-link active" href="../site/find.html">Find Book</a>\n' +
       '                <a class="nav-item nav-link active" href="../site/remove.html">Remove Book</a>\n' +
       '                <a class="nav-item nav-link active" href="../site/update.html">Update Book</a>\n' +
-      '      \'        <a class="nav-item nav-link active" href="./scratch.js"> scratch</a>\\n\' +\n            ' +
       '</div>\n' +
       '        </div>\n' +
       '    </nav>\n' +
