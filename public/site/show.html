@@ -12,48 +12,111 @@
 </head>
 <body>
 
-<! --
+<div class="container">
+    <h1>Show Books</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand active" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="add.html">Add Book </a>
+            <a class="nav-item nav-link active" href="show.html">Show Books</a>
+            <a class="nav-item nav-link active" href="find.html">Find Book</a>
+            <a class="nav-item nav-link active" href="remove.html">Remove Book</a>
+            <a class="nav-item nav-link active" href="update.html">Update Book</a>
+        </div>
+    </div>
+</nav>
+</div>
+<!--<! &#45;&#45;-->
 
-div class="container" id="output"
+<!--div class="container" id="output"-->
 
-//JS
+<!--//JS-->
 
-GETALL(){
-let output = document.getElementById("output");
-let table = "";
-table =
-<!--    "<table class=\"table table-dark\">" +-->
-<!--    "   <thead>" +-->
-<!--    "       <tr>" +-->
-<!--        "           <th scope=\"col\">Title</th>" +-->
-<!--        "           <th scope=\"col\">Author</th>" +-->
-<!--        "           <th scope=\"col\">ISBN</th>" +-->
-<!--        "           <th scope=\"col\">Price</th>" +-->
-<!--        "       </tr>" +-->
-<!--    "   </thead>" +-->
-<!--    "   <tbody>";-->
-<!--    for (let i=start; i<=end; i++){-->
-<!-- GET api/books -->
-name = name;
-author = author;
-isbn = isbn;
-price = price;
-<!--    table += (-->
-<!--    "   <tr>" +-->
-<!--        "       <th scope=\"row\">" + i + "</th>" +-->
-<!--        "       <td>" + name + "</td>" +-->
-<!--        "       <td>" + author + "</td>" +-->
-<!--        "       <td>" + isbn + "</td>" +-->
-<!--        "       <td>" + price + "</td>" +-->
-<!--        "   </tr>");-->
-<!--    }-->
-<!--    table += (-->
-<!--    "   </tbody>" +-->
-<!--    "</table>");-->
-<!--    output.innerHTML = table;-->
-<!--    }-->
+<!--GETALL(){-->
+<!--let output = document.getElementById("output");-->
+<!--let table = "";-->
+<!--table =-->
+<!--&lt;!&ndash;    "<table class=\"table table-dark\">" +&ndash;&gt;-->
+<!--&lt;!&ndash;    "   <thead>" +&ndash;&gt;-->
+<!--&lt;!&ndash;    "       <tr>" +&ndash;&gt;-->
+<!--&lt;!&ndash;        "           <th scope=\"col\">Title</th>" +&ndash;&gt;-->
+<!--&lt;!&ndash;        "           <th scope=\"col\">Author</th>" +&ndash;&gt;-->
+<!--&lt;!&ndash;        "           <th scope=\"col\">ISBN</th>" +&ndash;&gt;-->
+<!--&lt;!&ndash;        "           <th scope=\"col\">Price</th>" +&ndash;&gt;-->
+<!--&lt;!&ndash;        "       </tr>" +&ndash;&gt;-->
+<!--&lt;!&ndash;    "   </thead>" +&ndash;&gt;-->
+<!--&lt;!&ndash;    "   <tbody>";&ndash;&gt;-->
+<!--&lt;!&ndash;    for (let i=start; i<=end; i++){&ndash;&gt;-->
+<!--&lt;!&ndash; GET api/books &ndash;&gt;-->
+<!--name = name;-->
+<!--author = author;-->
+<!--isbn = isbn;-->
+<!--price = price;-->
+<!--&lt;!&ndash;    table += (&ndash;&gt;-->
+<!--&lt;!&ndash;    "   <tr>" +&ndash;&gt;-->
+<!--&lt;!&ndash;        "       <th scope=\"row\">" + i + "</th>" +&ndash;&gt;-->
+<!--&lt;!&ndash;        "       <td>" + name + "</td>" +&ndash;&gt;-->
+<!--&lt;!&ndash;        "       <td>" + author + "</td>" +&ndash;&gt;-->
+<!--&lt;!&ndash;        "       <td>" + isbn + "</td>" +&ndash;&gt;-->
+<!--&lt;!&ndash;        "       <td>" + price + "</td>" +&ndash;&gt;-->
+<!--&lt;!&ndash;        "   </tr>");&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+<!--&lt;!&ndash;    table += (&ndash;&gt;-->
+<!--&lt;!&ndash;    "   </tbody>" +&ndash;&gt;-->
+<!--&lt;!&ndash;    "</table>");&ndash;&gt;-->
+<!--&lt;!&ndash;    output.innerHTML = table;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
 
--->
+<!--&ndash;&gt;-->
+function ShowBooks(){
+let xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function ReceivedCallback() {
+if (this.readyState == 4 && this.status == 200) {
+document.getElementById("output").innerHTML = CreateTable(JSON.parse(this.responseText));
+}
+};
+xhttp.open("GET", "https://stark-tundra-99254.herokuapp.com/api/books/", true);
+xhttp.send();
+}
+
+
+function CreateTable(data){
+let retVal = '';
+retVal =
+'<div class="container"> \n' +
+    '<h2>' + "Show all books" + '</h2> \n' +
+    '<h2>' + data["name"] + '</h2> \n'
+    //     '<table class="table table-bordered table-hover"> \n' +
+        //     '	<thead> \n' +
+        //     '		<tr> \n' +
+            //     '			<th scope="col">Book Title</th> \n' +
+            //     '			<th scope="col">Author</th> \n' +
+            //     '			<th scope="col">ISBN</th> \n' +
+            //     '			<th scope="col">Price</th> \n' +
+            //     '		</tr> \n' +
+        //     '	</thead> \n' +
+        //     '	<tbody> \n';
+        //
+        // for(let i = 0; i < data.length; i++){
+        //     retVal +=
+        //         '<tr> \n' +
+            //         '	<td>' + data["name"] + '</td> \n' +
+            //         '	<td>' + data["author"] + '</td> \n' +
+            //         '	<td>' + data["isbn"] + '</td> \n' +
+            //         '	<td>' + data["price"] + '</td> \n' +
+            //         '</tr> \n';
+        //
+        // }
+        // retVal +=
+        //     '</tbody> \n' +
+        //     '</table> \n' +
+    //     '</div> \n ' ;
+return retVal;
+}
 
 
 </body>

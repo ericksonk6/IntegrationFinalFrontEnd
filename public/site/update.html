@@ -10,68 +10,171 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 
-    <! --
+<!--    <! &#45;&#45;-->
 
-    //form
-    enter ISBN: isbn
+<!--    //form-->
+<!--    enter ISBN: isbn-->
 
-    search button
-    button type="submit" id="check" class="btn btn-primary">Search
+<!--    search button-->
+<!--    button type="submit" id="check" class="btn btn-primary">Search-->
 
-    //book displayed in form
+<!--    //book displayed in form-->
 
-    script
-    document.getElementById("check").addEventListener("click", GET);
-    script
+<!--    script-->
+<!--    document.getElementById("check").addEventListener("click", GET);-->
+<!--    script-->
 
-    button type="submit" id="update" class="btn btn-primary">Updated
+<!--    button type="submit" id="update" class="btn btn-primary">Updated-->
 
-    script
-    document.getElementById("update").addEventListener("click", UPDATE);
-    script
+<!--    script-->
+<!--    document.getElementById("update").addEventListener("click", UPDATE);-->
+<!--    script-->
 
-    //JS
+<!--    //JS-->
 
-    GET(){
-    let isbn = parseInt(document.getElementById("isbn").value);
-    let output = document.getElementById("output");
+<!--    GET(){-->
+<!--    let isbn = parseInt(document.getElementById("isbn").value);-->
+<!--    let output = document.getElementById("output");-->
 
-    //GET api/books/isbn
+<!--    //GET api/books/isbn-->
 
 
-    if(book == found){
+<!--    if(book == found){-->
 
-    table =
-    Title: name
-    Author: author
-    ISBN: isbn
-    Price: price
+<!--    table =-->
+<!--    Title: name-->
+<!--    Author: author-->
+<!--    ISBN: isbn-->
+<!--    Price: price-->
 
-    output.innerHTML = table;
+<!--    output.innerHTML = table;-->
+
+<!--    }-->
+<!--    else{-->
+<!--    alert(The information you provided does not match our records)-->
+<!--    }-->
+<!--    }-->
+
+<!--    UPDATE(){-->
+<!--    let name = parseInt(document.getElementById("name").value);-->
+<!--    let author = parseInt(document.getElementById("author").value);-->
+<!--    let isbn = parseInt(document.getElementById("isbn").value);-->
+<!--    let price = parseInt(document.getElementById("price").value);-->
+
+<!--    Patch api/books/:isbn-->
+<!--    use info ^^-->
+<!--    alert(book updated);-->
+<!--    }-->
+
+
+
+<!--    &ndash;&gt;-->
+
+
+<script>
+
+    //get book info using user given isbn
+    function GET(){
+        let output = document.getElementById("output");
+        let isbn = parseInt(document.getElementById("isbn1").value);
+        //GET api/books/isbn
+
+        //if(book==found)
+        //output on form
+        //else alert(The information you provided does not match our records);
 
     }
-    else{
-    alert(The information you provided does not match our records)
+
+    //update any changed book info
+    function UPDATE(){
+        let name = parseInt(document.getElementById("name").value);
+        let author = parseInt(document.getElementById("author").value);
+        let isbn = parseInt(document.getElementById("isbn").value);
+        let price = parseInt(document.getElementById("price").value);
+
     }
-    }
+</script>
 
-    UPDATE(){
-    let name = parseInt(document.getElementById("name").value);
-    let author = parseInt(document.getElementById("author").value);
-    let isbn = parseInt(document.getElementById("isbn").value);
-    let price = parseInt(document.getElementById("price").value);
-
-    Patch api/books/:isbn
-    use info ^^
-    alert(book updated);
-    }
-
-
-
-    -->
 
 </head>
 <body>
+
+<!-- Title -->
+
+<div class="container">
+    <h1>Update Book Information</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand active" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="add.html">Add Book </a>
+                <a class="nav-item nav-link active" href="show.html">Show Books</a>
+                <a class="nav-item nav-link active" href="find.html">Find Book</a>
+                <a class="nav-item nav-link active" href="remove.html">Remove Book</a>
+                <a class="nav-item nav-link active" href="update.html">Update Book</a>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container">
+
+    <p style="color: blue">Enter ISBN of the book you would like to update</p>
+    <form>
+        <!-- SEARCH USING ISBN FORM -->
+
+            <!-- user enters isbn number -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="name">ISBN</label>
+                    <input type="text" class="form-control" id="get">
+                </div>
+            </div>
+        <!-- user presses send button -->
+        <button type="submit" class="btn btn-primary" id="get">Search</button>
+    </form>
+    <!-- ISBN goes to GET function -->
+    <script>
+        document.getElementById("get").addEventListener("click", GET);
+    </script>
+
+    <!-- Output book info from given isbn address, allow user to edit info -->
+
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Book Title</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="author">Author</label>
+                <input type="text" class="form-control" id="author">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="isbn">ISBN</label>
+                <input type="text" class="form-control" id="isbn">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="price">Price</label>
+                <input type="text" class="form-control" id="price">
+            </div>
+        </div>
+
+        <!-- User updated info & presses update button -->
+        <button type="submit" id="update" class="btn btn-primary">Update</button>
+    </form>
+
+</div>
+
+<!-- Updated info goes to UPDATE function -->
+<script>
+    document.getElementById("update").addEventListener("click", UPDATE);
+</script>
 
 </body>
 </html>

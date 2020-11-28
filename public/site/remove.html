@@ -9,68 +9,110 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
+
+    <script>
+
+    //GET function uses client given isbn to find book in database
+
+        function GET(){
+            let isbn = parseInt(document.getElementById("isbn").value);
+            let output = document.getElementById("output");
+
+            //GET api/books/isbn
+
+            // if the book is found, output the information
+
+            // if(book == found){
+            //
+            //     table =
+            //         Title: name
+            //     Author: author
+            //     ISBN: isbn
+            //     Price: price
+            //
+            //     output.innerHTML = table;
+            //
+            // }
+
+            //if the book is not found, sent alert
+
+            // else{
+            //     alert(The information you provided does not match our records)
+            // }
+        }
+
+        function DELETE(){
+             let isbn = parseInt(document.getElementById("isbn").value);
+            // Delete api/books/:isbn
+            // alert(book deleted)
+        }
+
+    </script>
 </head>
 <body>
 
-<! --
 
-//form
-enter ISBN: isbn
+<!-- Title -->
+<div class="container">
+    <h1>Remove Book</h1>
 
-search button
-button type="submit" id="check" class="btn btn-primary">Search
+           <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <a class="navbar-brand active" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="add.html">Add Book </a>
+                <a class="nav-item nav-link active" href="show.html">Show Books</a>
+                <a class="nav-item nav-link active" href="find.html">Find Book</a>
+                <a class="nav-item nav-link active" href="remove.html">Remove Book</a>
+                <a class="nav-item nav-link active" href="update.html">Update Book</a>
+            </div>
+        </div>
+    </nav>
+</div>
+<p></p>
 
-div class="container" id="output"
+<div class="container">
 
-script
-document.getElementById("check").addEventListener("click", GETByISBN);
-script
+    <p style="color: blue">Enter ISBN of the book you would like to delete</p>
 
-delete book button
-button type="submit" id="delete" class="btn btn-primary">Delete
+    <!-- SEARCH USING ISBN FORM -->
 
-script
-document.getElementById("delete").addEventListener("click", DELETE);
-script
+    <form>
+        <div class="form-group">
+            <label for="isbn1">ISBN</label>
 
-refresh page
-class="btn btn-primary" onClick="window.location.reload();">Refresh Page
+            <!-- user enters isbn number -->
+            <input type="text" class="form-control" id="isbn1">
+        </div>
 
+        <!-- user presses send button -->
+        <button type="submit" class="btn btn-primary" id="get">Search</button>
+    </form>
 
-//JS
+    <!-- ISBN goes to GET function -->
+    <script>
+        document.getElementById("get").addEventListener("click", GET);
+    </script>
 
-GETByISBN(){
-let isbn = parseInt(document.getElementById("isbn").value);
-let output = document.getElementById("output");
+    <!-- DELETE CONFIRMATION ISBN FORM -->
+    <p></p>
 
-//GET api/books/isbn
+    <label for="isbn1" style="color: red">Are you sure?</label>
+<form>
 
+    <!-- user presses delete button -->
+    <button type="submit" class="btn btn-primary" id="delete">Delete</button>
+</form>
 
-if(book == found){
+    <!-- ISBN goes to DELETE function -->
+    <script>
+        document.getElementById("delete").addEventListener("click", DELETE);
+    </script>
 
-table =
-Title: name
-Author: author
-ISBN: isbn
-Price: price
-
-output.innerHTML = table;
-
-}
-else{
-alert(The information you provided does not match our records)
-}
-}
-
-DELETE(){
-let isbn = parseInt(document.getElementById("isbn").value);
-Delete api/books/:isbn
-alert(book deleted)
-}
-
-
-
--->
+    </div>
 
 </body>
 </html>
