@@ -42,6 +42,10 @@ function findAuthor() {
 }
 function CreateTableAuthor(data){
     let retVal = "";
+    if(data === null || data.length === 0){
+        alert("not found");
+        return;
+    }
     retVal =
         '<table class="table table-bordered table-hover"> \n' +
         '	<thead> \n' +
@@ -85,7 +89,7 @@ function CreateTableIsbn(data){
         '	</thead> \n' +
         '	<tbody> \n';
 
-    for (let book in data){
+    // for (let book in data){
         retVal +=
             '<tr> \n' +
             '	<td>' + data["name"] + '</td> \n' +
@@ -93,7 +97,7 @@ function CreateTableIsbn(data){
             '	<td>' + data["isbn"] + '</td> \n' +
             '	<td>' + "$" + data["price"] + '</td> \n' +
             '</tr> \n';
-    }
+    // }
 
     retVal +=
         '</tbody> \n' +
