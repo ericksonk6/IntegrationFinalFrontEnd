@@ -13,6 +13,7 @@ function findData() {
         }
         if ( this.status == 404 || this.status == 500 ){
             document.getElementById("output").innerHTML = "<pre>" + this.responseText + "</pre>";
+            alert("invalid isbn");
             return;
         }
     };
@@ -76,7 +77,12 @@ function CreateTableAuthor(data){
 }
 
 function CreateTableIsbn(data){
+
     let retVal = "";
+    if(data === null || data.length === 0){
+        alert("not found");
+        return;
+    }
     retVal =
         '<table class="table table-bordered table-hover"> \n' +
         '	<thead> \n' +

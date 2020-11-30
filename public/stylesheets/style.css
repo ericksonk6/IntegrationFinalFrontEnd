@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text:100,300,400,500,600,700,800,900&display=swap');
+
+
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -6,3 +10,178 @@ body {
 a {
   color: #00B7FF;
 }
+
+body{
+  background-color: #d6e0e6;
+}
+a#navbarDropdown.nav-link.dropdown-toggle:active,
+a#navbarDropdown.nav-link.dropdown-toggle:focus {
+  outline: 0;
+}
+.nav-flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.nav-flex-row li {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 20px 15px;
+}
+
+.nav-flex-row li a {
+  font-family: 'Big Shoulders Text', cursive;
+  color: #ffffff;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+h1{
+  font: semi-condensed medium 'Arial Black';
+  font-size: xx-large;
+  font-weight: bolder;
+  color: darkolivegreen;
+  text-align: center;
+}
+
+h10{
+}
+
+a,
+a:focus,
+a:hover {
+  color: #789391;;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none;
+  background-color: #789391;
+  border: .05rem solid #fff;
+}
+input{
+  background-color: #789391;
+  color: #789391;
+}
+.nav-masthead .nav-link {
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.buttoncolor{
+  background-color: cornsilk;
+}
+
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.carousel-inner {
+  height: auto;
+}
+
+.intro {
+  height: 820px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 4em;
+  font-weight: 700;
+}
+.intro {
+  height: 820px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.white{
+  color: white;
+}
+.about{
+  display: flex;
+  align-items: center;
+  background-color: #f3f3f3c0;
+  padding: 50px 30px;
+}
+
+.about p,
+.about h3 {
+  text-align: justify;
+  width: 60%;
+  margin: auto;
+  font-family: 'Big Shoulders Text';
+  font-size: 1.8em;
+  font-size: 20px;
+  padding: 30px;
+  letter-spacing: 0.1em;
+
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  background-color: #f3f3f3c0;
+  padding: 50px 30px;
+}
+.contact
+{
+  text-align: center;
+}
+.contact form,
+.contact h3 {
+  text-align: justify;
+  width: 100%;
+  margin: auto;
+  font-family: 'Big Shoulders Text';
+  font-size: 1.8em;
+  font-size: 20px;
+  padding: 30px;
+  letter-spacing: 0.1em;
+
+}
+nav{
+  text-decoration: none;
+}
+
+nav ul {
+  display:inline-block; /* Simply remove this.. easy. */
+}
+
+.dropdown{
+  margin-top: 0px;
+}
+
+form{
+  font-family: 'Big Shoulders Text';
+
+}
+.intro h1 {
+  font-size: 2em;
+}
+
+.margin{
+  font-family: 'Big Shoulders Text';
+  font-size: larger;
+}
+
+
+

@@ -4,8 +4,6 @@ let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         document.getElementById("output").innerHTML = CreateTable(JSON.parse(this.responseText));
-    }else{
-        document.getElementById("output").innerHTML = "hey";
     }
 };
 xhttp.open("GET", "https://stark-tundra-99254.herokuapp.com/api/books", true);
