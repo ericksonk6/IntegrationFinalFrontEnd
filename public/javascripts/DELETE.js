@@ -31,7 +31,7 @@ function CreateTableIsbn(data){
         '	</thead> \n' +
         '	<tbody> \n';
 
-    for (let book in data){
+
         retVal +=
             '<tr> \n' +
             '	<td>' + data["name"] + '</td> \n' +
@@ -39,7 +39,7 @@ function CreateTableIsbn(data){
             '	<td>' + data["isbn"] + '</td> \n' +
             '	<td>' + "$" + data["price"] + '</td> \n' +
             '</tr> \n';
-    }
+
 
     retVal +=
         '</tbody> \n' +
