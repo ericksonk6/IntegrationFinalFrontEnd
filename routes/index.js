@@ -45,6 +45,11 @@ router.get('/', function(request, response, next) {
       '\n' +
       '</div>\n'
   );
+
+  response.write(
+      '       </body> \n' +
+      '</html> \n'
+  );
   response.end();
 });
 
