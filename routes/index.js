@@ -17,6 +17,7 @@ router.get('/', function(request, response, next) {
       '               <script type="text/javascript" src="/javascripts/books.js"></script>' +
       ' <link rel = "stylesheet"\n' +
       '          type = "text/css"\n' +
+      '          href = "../stylesheets/style.css"/>'+
       ' \n' +
       '               <title>Book Database</title> \n' +
       '<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>\n'+
@@ -29,13 +30,10 @@ router.get('/', function(request, response, next) {
       '               <div class="container" style="text-align: center"> \n'
   );
   response.write(
+      '<div class="container">\n' +
       '    <h1>Book Database</h1>\n' +
-      '<div class="jumbotron">\n' +
       '    <nav class="navbar navbar-expand-lg navbar-light bg-light">\n' +
       '        <a class="navbar-brand active" href="/">Home</a>\n' +
-      '           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">  </button>\n\n' +
-      '            <span class="navbar-toggler-icon"></span>\n' +
-      '        </button>\n' +
       '        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">\n' +
       '            <div class="navbar-nav">\n' +
       '               <a class="nav-item nav-link active" href="../site/add.html">Add Book </a>\n' +
@@ -46,6 +44,9 @@ router.get('/', function(request, response, next) {
       '            </div>\n' +
       '        </div>\n' +
       '    </nav>\n' +
+      '</div>' +
+      '<div>' +
+      '<img src="../public/site/books.jpg">' +
       '</div>'
   );
 
