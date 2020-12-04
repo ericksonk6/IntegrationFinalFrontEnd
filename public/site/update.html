@@ -139,6 +139,7 @@
             document.getElementById('author').value === "" || document.getElementById('author').value.length === 0
             || document.getElementById('price').value === "" || document.getElementById('price').value.length === 0) {
             alert("ERROR: please fill all fields");
+            return;
         }
 
         let url = "https://stark-tundra-99254.herokuapp.com/api/books/"

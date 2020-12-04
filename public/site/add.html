@@ -75,17 +75,19 @@
                 || document.getElementById('price').value === "" || document.getElementById('price').value.length === 0) {
                 alert("ERROR: please fill all fields");
             }
-            if ( this.status == 404 || this.status == 500 ){
-                document.getElementById("output").innerHTML = "<pre>" + this.responseText + "</pre>";
-            }
+
 
                 let url = "https://stark-tundra-99254.herokuapp.com/api/books/"
                 let xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function () {
-                    if (this.readyState == 4 && this.status == 200) {
-                        document.getElementById("output").innerHTML =
-                            "<pre>" + this.responseText + "</pre>";
+                    if (this.readyState == 4 && this.status == 200){
+                        document.getElementById("output").innerHTML = document.getElementById('name').value + " was successfully added to the database"
                     }
+                    if ( this.status == 404 || this.status == 500 ){
+                        document.getElementById("output").innerHTML = "<pre>" + this.responseText + "</pre>";
+                    }
+
+
                 };
 
                 let newBook =

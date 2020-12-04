@@ -30,24 +30,51 @@ router.get('/', function(request, response, next) {
       '               <div class="container" style="text-align: center"> \n'
   );
   response.write(
-      '<div class="container">\n' +
-      '    <h1>Book Database</h1>\n' +
-      '    <nav class="navbar navbar-expand-lg navbar-light bg-light">\n' +
-      '        <a class="navbar-brand active" href="/">Home</a>\n' +
-      '        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">\n' +
-      '            <div class="navbar-nav">\n' +
+      '<h1>Kates Book Database</h1>\n' +
+      '<nav class="navbar navbar-expand-lg navbar-light">\n' +
+      '    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">\n' +
+      '        <span class="navbar-toggler-icon"></span>\n' +
+      '    </button>\n' +
+      '\n' +
+      '    <div class="collapse navbar-collapse" id="navbarSupportedContent">\n' +
+      '        <ul class="navbar-nav mr-auto">\n' +
+      '            <li class="nav-item">\n' +
       '               <a class="nav-item nav-link active" href="../site/add.html">Add Book </a>\n' +
-      '                <a class="nav-item nav-link active" href="../site/show.html">Show Books</a>\n' +
-      '                <a class="nav-item nav-link active" href="../site/find.html">Find Book</a>\n' +
-      '                <a class="nav-item nav-link active" href="../site/remove.html">Remove Book</a>\n' +
-      '                <a class="nav-item nav-link active" href="../site/update.html">Update Book</a>\n' +
-      '            </div>\n' +
-      '        </div>\n' +
-      '    </nav>\n' +
-      '</div>' +
-      '<div>' +
-      '<img src="../public/site/books.jpg">' +
-      '</div>'
+      '            </li>\n' +
+      '            <li class="nav-item">\n' +
+      '               <a class="nav-item nav-link active" href="../site/show.html">Show Book </a>\n' +
+      '            </li>\n' +
+      '            <li class="nav-item">\n' +
+      '               <a class="nav-item nav-link active" href="../site/find.html">Find Book </a>\n' +
+      '            </li>\n' +
+      '            <li class="nav-item">\n' +
+      '               <a class="nav-item nav-link active" href="../site/remove.html">Remove Book </a>\n' +
+      '            </li>\n' +
+      '            <li class="nav-item">\n' +
+      '               <a class="nav-item nav-link active" href="../site/update.html">Update Book </a>\n' +
+      '            </li>\n' +
+      '\n' +
+      '        </ul>\n' +
+      '    </div>\n' +
+      '</nav>'
+      // '<div class="container">\n' +
+      // '    <h1>Book Database</h1>\n' +
+      // '    <nav class="navbar navbar-expand-lg navbar-light bg-light">\n' +
+      // '        <a class="navbar-brand active" href="/">Home</a>\n' +
+      // '        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">\n' +
+      // '            <div class="navbar-nav">\n' +
+      // '               <a class="nav-item nav-link active" href="../site/add.html">Add Book </a>\n' +
+      // '                <a class="nav-item nav-link active" href="../site/show.html">Show Books</a>\n' +
+      // '                <a class="nav-item nav-link active" href="../site/find.html">Find Book</a>\n' +
+      // '                <a class="nav-item nav-link active" href="../site/remove.html">Remove Book</a>\n' +
+      // '                <a class="nav-item nav-link active" href="../site/update.html">Update Book</a>\n' +
+      // '            </div>\n' +
+      // '        </div>\n' +
+      // '    </nav>\n' +
+      // '</div>' +
+      // '<div>' +
+      // '<img src="../public/site/books.jpg">' +
+      // '</div>'
   );
 
   response.write(
